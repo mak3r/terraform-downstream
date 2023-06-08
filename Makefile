@@ -50,6 +50,5 @@ install_scripts:
 
 install_vclusters:
 	# Do this for every downstream host
-	# First argument is the API_TOKEN generated using Rancher.
-	# Second argument is the number of downstream virtual clusters to setup on every host.
+	# Argument is the number of downstream virtual clusters to setup on every host.
 	bin/setup-vclusters.sh 20

@@ -15,10 +15,10 @@ function install-downstreams {
 
 	ssh -o StrictHostKeychecking=no ec2-user@$DOWNIP "sudo zypper -n in jq git make"	
 	ssh ec2-user@$DOWNIP "git clone https://github.com/mak3r/terraform-downstream.git"
-	ssh ec2-user@$DOWNIP "cd scale-testing && bin/install-k3s.sh"
-	ssh ec2-user@$DOWNIP "cd scale-testing && bin/install-helm.sh"
-	ssh ec2-user@$DOWNIP "cd scale-testing && bin/install-vcluster.sh"
-	ssh ec2-user@$DOWNIP "cd scale-testing && make install_scripts"
+	ssh ec2-user@$DOWNIP "cd terraform-downstream && bin/install-k3s.sh"
+	ssh ec2-user@$DOWNIP "cd terraform-downstream && bin/install-helm.sh"
+	ssh ec2-user@$DOWNIP "cd terraform-downstream && bin/install-vcluster.sh"
+	ssh ec2-user@$DOWNIP "cd terraform-downstream && make install_scripts"
 
 	# Start a screen and build the clusters in the background
 	scp bin/build-cluster-group.sh ec2-user@$DOWNIP:~/. 

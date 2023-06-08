@@ -2,5 +2,5 @@
 
 source /usr/local/bin/test.sh
 
-cd scale-testing
+cd terraform-downstream
 create-n $1 $2 $3
