@@ -1,0 +1,12 @@
+aws_access_key_id = "ACCESSKEYID"
+aws_secret_access_key = "SEcreTAccessKeY"
+prefix = "mak3r"
+ssh_key_file_name = "~/.ssh/id_rsa"
+aws_region = "us-east-1"
+downstream_count = 0
+rancher_subdomain = "demo"
+rancher_access_token = ""
+instance_type = "t3a.medium"
+#instance_type = "t3a.xlarge"
+#GPU
+#instance_type = "p3.2xlarge"
