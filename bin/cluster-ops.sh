@@ -1,10 +1,5 @@
 #!/bin/bash
 
-TF_STATE="terraform-setup/terraform.tfstate"
-DIP=($(terraform output -state=$TF_STATE -json downstream_ips | jq -r '.[]'))
-RANCHER_HOST=($(terraform output -state=$TF_STATE -json rancher_url | jq -r '.'))
-ACCESS_TOKEN=($(terraform output -state=$TF_STATE -json rancher_access_token | jq -r '.'))
-
 # takes argument of cluster name within rancher
 function create-cluster() 
 {

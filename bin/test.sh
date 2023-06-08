@@ -2,9 +2,6 @@
 
 source /usr/local/bin/scale-test.sh
 
-TF_STATE="terraform-setup/terraform.tfstate"
-RANCHER_HOST=($(terraform output -state=$TF_STATE -json rancher_url | jq -r '.'))
-
 CLUSTER_PREFIX="vc"
 DATA_FILE="timings.txt"
 
